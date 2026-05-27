@@ -7,5 +7,6 @@ Connecting a display with a parallel interface to a popular debug board based on
 ## A variant of the display module made according to the above scheme:
 <img width="1142" height="654" alt="TFT_LCD_DBI_board" src="https://github.com/user-attachments/assets/cb208a04-4b7a-45a8-9e8f-eb6f4da9a864" />
 
+## An example of display operation on the ili9488 controller (480x320):
 https://github.com/user-attachments/assets/68153178-155e-4537-9a98-4472d4e05348
 
