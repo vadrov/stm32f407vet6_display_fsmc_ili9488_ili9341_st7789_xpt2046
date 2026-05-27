@@ -1,0 +1,5 @@
+../Display/ili9488.c:82:16:ILI9488_Init	1
+../Display/ili9488.c:87:23:ILI9488_SetWindow	1
+../Display/ili9488.c:96:16:ILI9488_SleepIn	1
+../Display/ili9488.c:101:16:ILI9488_SleepOut	1
+../Display/ili9488.c:106:16:ILI9488_SetOrientation	2

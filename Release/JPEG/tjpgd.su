@@ -1,0 +1,3 @@
+../JPEG/tjpgd.c:572:12:huffext	40	static
+../JPEG/tjpgd.c:1775:9:jd_prepare	88	static,ignoring_inline_asm
+../JPEG/tjpgd.c:1977:9:jd_decomp	128	static,ignoring_inline_asm

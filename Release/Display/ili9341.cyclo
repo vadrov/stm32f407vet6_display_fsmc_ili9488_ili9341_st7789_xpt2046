@@ -1,0 +1,5 @@
+../Display/ili9341.c:91:16:ILI9341_Init	1
+../Display/ili9341.c:96:23:ILI9341_SetWindow	1
+../Display/ili9341.c:105:16:ILI9341_SleepIn	1
+../Display/ili9341.c:110:16:ILI9341_SleepOut	1
+../Display/ili9341.c:115:16:ILI9341_SetOrientation	2

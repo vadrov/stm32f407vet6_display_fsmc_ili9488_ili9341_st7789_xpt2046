@@ -1,0 +1,5 @@
+../Display/ili9488.c:82:16:ILI9488_Init	0	static
+../Display/ili9488.c:87:23:ILI9488_SetWindow	4	static
+../Display/ili9488.c:96:16:ILI9488_SleepIn	0	static
+../Display/ili9488.c:101:16:ILI9488_SleepOut	0	static
+../Display/ili9488.c:106:16:ILI9488_SetOrientation	0	static
