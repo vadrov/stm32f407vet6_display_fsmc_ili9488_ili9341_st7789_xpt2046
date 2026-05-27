@@ -3,6 +3,7 @@ Connecting a display with a parallel interface to a popular debug board based on
 
 ## A variant of the circuit for a display with a parallel interface:
 <img width="1169" height="828" alt="Schematic_LCD_module_DBI_parallel_16bit_ILI9488" src="https://github.com/user-attachments/assets/576b2dd5-07f3-4e2b-93bd-e400f08954ed" />
+
 ## A variant of the display module made according to the above scheme:
 <img width="1142" height="654" alt="TFT_LCD_DBI_board" src="https://github.com/user-attachments/assets/cb208a04-4b7a-45a8-9e8f-eb6f4da9a864" />
 
