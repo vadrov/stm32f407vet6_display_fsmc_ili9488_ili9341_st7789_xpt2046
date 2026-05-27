@@ -10,3 +10,5 @@ Connecting a display with a parallel interface to a popular debug board based on
 ## An example of display operation on the ili9488 controller (480x320):
 https://github.com/user-attachments/assets/68153178-155e-4537-9a98-4472d4e05348
 
+## An example of display operation on the ili9488 controller (480x320) in conjunction with the XPT2046 resistive touchscreen controller:
+https://github.com/user-attachments/assets/b5b52bdf-1b2e-4bf9-a962-387be544669a
