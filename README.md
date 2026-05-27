@@ -12,3 +12,9 @@ https://github.com/user-attachments/assets/68153178-155e-4537-9a98-4472d4e05348
 
 ## An example of display operation on the ili9488 controller (480x320) in conjunction with the XPT2046 resistive touchscreen controller:
 https://github.com/user-attachments/assets/b5b52bdf-1b2e-4bf9-a962-387be544669a
+
+Free distribution allowed. For any method of distribution, attribution to the author is MANDATORY. In case of changes and distribution of modifications, attribution to the original author is MANDATORY. Distributed "as is", that is, use is at your own peril and risk. The author does not provide any guarantees.
+
+**VadRov**\
+Contacts: [Youtube](https://www.youtube.com/@VadRov) [Дзен](https://dzen.ru/vadrov) [VK](https://vk.com/vadrov) [Telegram](https://t.me/vadrov_channel)\
+Donate: [donate.yoomoney](https://yoomoney.ru/to/4100117522443917)
