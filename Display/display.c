@@ -419,10 +419,9 @@ void LCD_WriteDataDMA(LCD_Handler *lcd, uint16_t *data, uint32_t len)
 	if (lcd->fsmc_data.dma) { //Если DMA доступно
 		while (!lcd->dma_complete) ;
 		lcd->dma_complete = 0;
-#if 0
 		DMA_TypeDef *dma_x = lcd->fsmc_data.dma;
 		uint32_t stream = lcd->fsmc_data.dma_stream;
-		DMA_Stream_TypeDef *dma_TX = ((DMA_Stream_TypeDef *)((uint32_t)((uint32_t)dma_x + STREAM_OFFSET_TAB[stream])));
+		DMA_Stream_TypeDef *dma_TX = (DMA_Stream_TypeDef *)((uint32_t)((uint32_t)dma_x + 24 * stream + 16));
 		uint8_t shift[8] = {0, 6, 16, 22, 0, 6, 16, 22}; //битовое смещение во флаговых регистрах IFCR (L и H)
 		volatile uint32_t *ifcr_tx = (stream > 3) ? &(dma_x->HIFCR) : &(dma_x->LIFCR);
 		//сбрасываем флаги прерываний tx
@@ -440,12 +439,6 @@ void LCD_WriteDataDMA(LCD_Handler *lcd, uint16_t *data, uint32_t len)
 			lcd->size_mem = len - 65535;
 		}
 		dma_TX->CR |= (DMA_SxCR_EN); //старт DMA передачи
-#else
-		DMA2_Stream0->CR |= DMA_SxCR_PINC;
-		DMA2_Stream0->NDTR = len;
-		DMA2_Stream0->PAR = (uint32_t)data;
-		DMA2_Stream0->CR |= (DMA_SxCR_EN);
-#endif
 	}
 	else { //DMA недоступно
 		LCD_WriteData(lcd, data, len);
@@ -495,10 +488,9 @@ void LCD_FillWindow(LCD_Handler* lcd, uint16_t x1, uint16_t y1, uint16_t x2, uin
 	else { //DMA разрешено
 		lcd->dma_complete = 0;
 		lcd->fill_color = color16;
-#if 0
 		DMA_TypeDef *dma_x = lcd->fsmc_data.dma;
 		uint32_t stream = lcd->fsmc_data.dma_stream;
-		DMA_Stream_TypeDef *dma_TX = ((DMA_Stream_TypeDef *)((uint32_t)((uint32_t)dma_x + STREAM_OFFSET_TAB[stream])));
+		DMA_Stream_TypeDef *dma_TX = (DMA_Stream_TypeDef *)((uint32_t)((uint32_t)dma_x + 24 * stream + 16));
 		uint8_t shift[8] = {0, 6, 16, 22, 0, 6, 16, 22}; //битовое смещение во флаговых регистрах IFCR (L и H)
 		volatile uint32_t *ifcr_tx = (stream > 3) ? &(dma_x->HIFCR) : &(dma_x->LIFCR);
 		//сбрасываем флаги прерываний tx
@@ -516,19 +508,6 @@ void LCD_FillWindow(LCD_Handler* lcd, uint16_t x1, uint16_t y1, uint16_t x2, uin
 			lcd->size_mem = len - 65535;
 		}
 		dma_TX->CR |= (DMA_SxCR_EN); //старт DMA передачи
-#else
-		DMA2_Stream0->CR &= ~DMA_SxCR_PINC;
-		if (len <= 65535) {
-			DMA2_Stream0->NDTR = len;
-			lcd->size_mem = 0;
-		}
-		else {
-			DMA2_Stream0->NDTR = 65535;
-			lcd->size_mem = len - 65535;
-		}
-		DMA2_Stream0->PAR = (uint32_t)&lcd->fill_color;
-		DMA2_Stream0->CR |= (DMA_SxCR_EN);
-#endif
 	}
 }
 
