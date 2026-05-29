@@ -1,9 +1,0 @@
-../XPT2046/xpt2046.c:200:12:get_adc_in	64	static,ignoring_inline_asm
-../XPT2046/xpt2046.c:311:16:get_touch	16	static
-../XPT2046/xpt2046.c:41:6:XPT2046_InitTouch	16	static
-../XPT2046/xpt2046.c:68:9:XPT2046_GetTouch	16	static
-../XPT2046/xpt2046.c:91:6:XPT2046_EXTICallback	4	static,ignoring_inline_asm
-../XPT2046/xpt2046.c:109:6:XPT2046_TIMCallback	16	static,ignoring_inline_asm
-../XPT2046/xpt2046.c:147:5:XPT2046_GetTemp	16	static
-../XPT2046/xpt2046.c:165:5:XPT2046_GetVbat	8	static
-../XPT2046/xpt2046.c:180:5:XPT2046_GetAux	8	static
